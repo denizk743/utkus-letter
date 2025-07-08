@@ -15,9 +15,8 @@
           <div class="text">
             <strong>Dear Utku,</strong>
             <p>
-              Surprise! 🎉 This isn’t just a fancy envelope — it’s a letter full of celebration.
-              I hope this little animation made you smile. You’re an amazing friend, and I’m truly
-              glad you exist. 😊
+              Surprise! 🎉 This isn’t just a fancy envelope — it’s a letter full of celebration.  
+              I hope this little animation made you smile. You’re an amazing friend, and I’m truly glad you exist. 😊
             </p>
             <p>
               May this year bring you peace, laughter, and everything you love most.
@@ -33,6 +32,9 @@
 
   <script>
     const envelope = document.querySelector('.envelope-wrapper');
+    const letter = document.querySelector('.letter');
+    envelope.classList.remove('flap'); // make sure letter is hidden on load
+
     envelope.addEventListener('click', () => {
       envelope.classList.toggle('flap');
     });
