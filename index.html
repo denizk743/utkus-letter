@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <audio id="birthdayAudio" src="the-birthday-cake.mp3"></audio>
-
   <div class="container">
     <div class="envelope-wrapper">
       <div class="envelope">
@@ -30,16 +28,18 @@
     </div>
   </div>
 
+  <audio id="birthday-audio" src="the birthday cake.mp3"></audio>
+
   <script>
     const envelope = document.querySelector('.envelope-wrapper');
-    const audio = document.getElementById('birthdayAudio');
-    audio.volume = 0.4;
+    const music = document.getElementById("birthday-audio");
+
+    envelope.classList.remove('flap'); // make sure letter is hidden on load
 
     envelope.addEventListener('click', () => {
       envelope.classList.toggle('flap');
-      if (!audio.played.length) {
-        audio.play();
-      }
+      music.volume = 0.2;
+      music.play();
     });
   </script>
 </body>
