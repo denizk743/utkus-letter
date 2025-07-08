@@ -34,11 +34,11 @@
     const envelope = document.querySelector('.envelope-wrapper');
     const music = document.getElementById("birthday-audio");
 
-    envelope.classList.remove('flap'); // make sure letter is hidden on load
+    envelope.classList.remove('flap');
 
     envelope.addEventListener('click', () => {
       envelope.classList.toggle('flap');
-      music.volume = 0.2;
+      music.volume = 0.4;
       music.play();
     });
   </script>
