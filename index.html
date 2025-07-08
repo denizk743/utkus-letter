@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>İyi ki doğdun Utku!</title>
+  <title>İyi ki doğdun Utku!!</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <div class="envelope-wrapper">
       <div class="envelope">
-        <div class="letter" style="overflow-y: auto;">
+        <div class="letter">
           <div class="text">
             <strong>Sevgili Utku,</strong>
             <p>
@@ -28,6 +28,7 @@
     </div>
   </div>
 
+  <!-- Audio -->
   <audio id="bg-music" src="the%20birthday%20cake.mp3"></audio>
 
   <script>
@@ -37,8 +38,10 @@
     envelope.addEventListener('click', () => {
       envelope.classList.toggle('flap');
       if (envelope.classList.contains('flap')) {
-        music.volume = 0.4;
-        music.play();
+        music.volume = 0.6;
+        music.play().catch(() => {
+          alert("Müziğin başlaması için bir kez daha tıklaman gerekebilir 🎶");
+        });
       }
     });
   </script>
