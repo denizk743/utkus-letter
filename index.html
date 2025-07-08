@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>İyi ki doğdun Utku!</title>
+  <title>Happy Birthday Utku!</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,18 +28,21 @@
     </div>
   </div>
 
-  <audio id="birthday-audio" src="the birthday cake.mp3"></audio>
+  <!-- Audio -->
+  <audio id="bg-music" src="the%20birthday%20cake.mp3"></audio>
 
   <script>
     const envelope = document.querySelector('.envelope-wrapper');
-    const music = document.getElementById("birthday-audio");
-
-    envelope.classList.remove('flap'); // make sure letter is hidden on load
+    const music = document.getElementById('bg-music');
 
     envelope.addEventListener('click', () => {
       envelope.classList.toggle('flap');
-      music.volume = 0.4;
-      music.play();
+      if (envelope.classList.contains('flap')) {
+        music.volume = 0.4;
+        music.play().catch(() => {
+          alert("Müziğin başlaması için bir kez daha tıklaman gerekebilir 🎶");
+        });
+      }
     });
   </script>
 </body>
