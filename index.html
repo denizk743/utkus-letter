@@ -20,7 +20,7 @@
             <p>
               Umarım bu yaşın şu ana kadar en çok köpek sevdiğin yaş olur :p
             </p>
-            <p>Sevgilerle,<br>Deniz</p>
+            <p>İçtenlikle,<br>Deniz</p>
           </div>
         </div>
       </div>
@@ -28,7 +28,6 @@
     </div>
   </div>
 
-  <!-- Audio -->
   <audio id="bg-music" src="the%20birthday%20cake.mp3"></audio>
 
   <script>
@@ -39,9 +38,7 @@
       envelope.classList.toggle('flap');
       if (envelope.classList.contains('flap')) {
         music.volume = 0.4;
-        music.play().catch(() => {
-          alert("Müziğin başlaması için bir kez daha tıklaman gerekebilir 🎶");
-        });
+        music.play();
       }
     });
   </script>
