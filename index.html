@@ -28,13 +28,21 @@
     </div>
   </div>
 
+  <!-- Audio -->
+  <audio id="bg-music" src="the%20birthday%20cake.mp3"></audio>
+
   <script>
     const envelope = document.querySelector('.envelope-wrapper');
-    const letter = document.querySelector('.letter');
-    envelope.classList.remove('flap'); // make sure letter is hidden on load
+    const music = document.getElementById('bg-music');
 
     envelope.addEventListener('click', () => {
       envelope.classList.toggle('flap');
+      if (envelope.classList.contains('flap')) {
+        music.volume = 0.6;
+        music.play().catch(() => {
+          alert("Müziğin başlaması için bir kez daha tıklaman gerekebilir 🎶");
+        });
+      }
     });
   </script>
 </body>
