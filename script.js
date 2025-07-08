@@ -1,8 +1,6 @@
-const envelope = document.getElementById('envelope');
-const music = document.getElementById('bg-music');
-
-envelope.addEventListener('click', () => {
-  envelope.classList.toggle('open');
-  music.volume = 0.5;
-  music.play().catch(() => {});
+document.addEventListener('DOMContentLoaded', () => {
+  const envelope = document.getElementById('envelope');
+  envelope.addEventListener('click', () => {
+    envelope.classList.toggle('open');
+  });
 });
