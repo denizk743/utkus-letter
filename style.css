@@ -6,7 +6,7 @@
   --envelope-cover: #e6cfa7;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --txt-color: #444;
-  --heart-color: rgb(252, 8, 231);
+  --heart-color: #b30000;
 }
 
 body {
@@ -73,12 +73,12 @@ body {
   padding: 20px 10px;
   overflow-y: scroll;
 
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .envelope > .letter::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .envelope > .letter > .text {
